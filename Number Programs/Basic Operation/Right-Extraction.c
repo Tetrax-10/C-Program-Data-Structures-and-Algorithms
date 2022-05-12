@@ -11,6 +11,10 @@ int main()
         printf("%d %d\n", num, dig);
         pv = pv * 10;
     }
+    // while (num) {                    // Simple Method
+    //     printf("%d", num % 10);
+    //     num /= 10;
+    // }
     printf("%d", num);
     return 0;
 }
