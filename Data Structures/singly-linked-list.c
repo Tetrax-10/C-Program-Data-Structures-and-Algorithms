@@ -30,7 +30,9 @@ void InsertNode(int ele) {
         }
     }
 }
-void DeleteNode(int ele) {
+void DeleteNode() {
+    int ele;
+    scanf("%d", &ele);
     for (prev = NULL, tptr = start; tptr != NULL && tptr->data != ele;
          prev = tptr, tptr = tptr->next)
         ;
@@ -70,7 +72,7 @@ void SLLDisplay() {
     printf("\n");
 }
 
-int main() {
+void GetInput() {
     int num;
     while (1) {
         scanf("%d", &num);
@@ -78,10 +80,12 @@ int main() {
             break;
         InsertNode(num);
     }
+}
+
+int main() {
+    GetInput();
     SLLDisplay();
-    // int key;
-    // scanf("%d", &key);
-    // DeleteNode(key);
+    // DeleteNode();
     // SLLDisplay();
     printf("Middle node value : %d\n", MidNode());
     Reverse();
